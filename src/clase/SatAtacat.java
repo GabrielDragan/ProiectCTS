@@ -11,8 +11,14 @@ public class SatAtacat {
 	}
 	
 	public SatAtacat(int x,int y){
+		if(pozitieX !=0 && pozitieY !=0){
 		this.pozitieX=x;
 		this.pozitieY=y;
+		}
+		else
+		{
+			System.out.println("Introduce alte date!");
+		}
 	}
 
 	public int getPozitieX() {
@@ -20,7 +26,13 @@ public class SatAtacat {
 	}
 
 	public void setPozitieX(int pozitieX) {
+		if(pozitieX !=0){
 		this.pozitieX = pozitieX;
+		}
+		else
+		{
+			System.out.println("Introdu o pozitie corecta!");
+		}
 	}
 
 	public int getPozitieY() {
@@ -28,7 +40,13 @@ public class SatAtacat {
 	}
 
 	public void setPozitieY(int pozitieY) {
+		if(pozitieY !=0){
 		this.pozitieY = pozitieY;
+		}
+		else
+		{
+			System.out.println("Introdu o pozitie corecta!");
+		}
 	}
 	
 

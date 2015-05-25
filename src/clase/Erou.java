@@ -37,7 +37,15 @@ public class Erou {
 	}
 
 	public void setViteza(int viteza) {
+		if(viteza !=0){
 		this.viteza = viteza;
+ 
+		}
+		else
+		{
+			System.out.println("Introdu viteza corecta!");
+		}
+
 	}
 
 	public int getGradDezvoltare() {
@@ -45,7 +53,13 @@ public class Erou {
 	}
 
 	public void setGradDezvoltare(int gradDezvoltare) {
+		if(gradDezvoltare !=0){
 		this.gradDezvoltare = gradDezvoltare;
+		}
+		else
+		{
+			System.out.println("Nu ai cum sa nu te dezvolti!");
+		}
 	}
 	@Override
 	public String toString() {

@@ -10,8 +10,14 @@ public class Trupe {
 	}
 	
 	public Trupe(int cavalerie,int infanterie){
+		if(numarCavalerie !=0 && numarInfanterie !=0){
 		this.numarCavalerie=cavalerie;
 		this.numarInfanterie=infanterie;
+		}
+		else
+		{
+			System.out.println("Nu ai trupe!");
+		}
 	}
 
 	public int getNumarCavalerie() {
@@ -41,14 +47,15 @@ public class Trupe {
 	}
 	
 	public void cavalerie(){
-		if(numarCavalerie > numarInfanterie){
+		if(numarCavalerie>numarInfanterie){
 			System.out.println("Cavaleria este mai puternica pentru aparare");
 		}
-		else if(numarCavalerie <300){
+		else if(numarCavalerie<350){
 			System.out.println("Retrage cavaleria inainte sa ajunga atacul");
 		}
 		else 
 			System.out.println("Mentine cavaleria in aparare");
+		
 	}
 	public void infanterie(){
 		if(numarInfanterie <2000){
@@ -57,6 +64,11 @@ public class Trupe {
 		}
 		else
 			System.out.println("Pastreaza trupele si mai cere intariri");
+	}
+	
+	public int consumHrana(int numarCav,int numarInf){
+		int consum=0;
+		return consum=numarCav*4+numarInf*2;
 	}
 
 	

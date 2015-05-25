@@ -9,7 +9,13 @@ public class TrupeAtac {
 	private IAtaca tipAtac;
 	
 	public TrupeAtac(int nr){
+		if(numarTrupe !=0){
 		this.numarTrupe=nr;
+		}
+		else
+		{
+			System.out.println("Nu ai trupe!");
+		}
 	}
 	
 	public void ataca(){
@@ -24,7 +30,13 @@ public class TrupeAtac {
 	}
 
 	public void setNumarTrupe(int numarTrupe) {
+		if(numarTrupe !=0){
 		this.numarTrupe = numarTrupe;
+		}
+		else
+		{
+			System.out.println("Nu exista trupe!");
+		}
 	}
 
 	public IAtaca getTipAtac() {
@@ -32,6 +44,7 @@ public class TrupeAtac {
 	}
 
 	public void setTipAtac(IAtaca tipAtac) {
+		
 		this.tipAtac = tipAtac;
 	}
 	

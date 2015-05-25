@@ -9,7 +9,13 @@ public class TrupeGeneral {
 	}
 	
 	public TrupeGeneral(String tip){
+		if (tip != null && !tip.matches("[0-9]+")){
 		this.tip=tip;
+		}
+		else
+		{
+			System.out.println("Tipul armatei nu este corect!");
+		}
 	}
 
 	public String getTip() {

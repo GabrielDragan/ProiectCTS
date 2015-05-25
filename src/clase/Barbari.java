@@ -1,5 +1,7 @@
 package clase;
 
+import java.awt.font.NumericShaper;
+
 import interfete.ITrib;
 
 public class Barbari implements ITrib{
@@ -14,20 +16,34 @@ public class Barbari implements ITrib{
 	
 	public Barbari(){
 		
-		this.numePersoane="barbar";
+		/*this.numePersoane="barbar";
 		this.numarPersoane=360;
 		this.deplasare=20;
 		this.stocareHrana=300045;
-		this.fortaArmata=9867;
+		this.fortaArmata=9867; */
 		
 	}
 	
-	public Barbari(String nume,int numar,int deplasare,int stocare,int forta){
-		this.numePersoane=nume;
-		this.numarPersoane=numar;
+	public Barbari(String numeP,int numarPersoane,int deplasare,int stocare,int fortaArmata){
+		if (numePersoane != null && !numePersoane.matches("[0-9]+")) {
+		this.numePersoane=numeP;
+		}
+		if(numarPersoane !=0){
+		this.numarPersoane=numarPersoane;
+		}
+		if(deplasare !=0){
 		this.deplasare=deplasare;
-		this.stocareHrana=stocare;
-		this.fortaArmata=forta;
+		}
+		if(stocareHrana !=0){
+		this.stocareHrana=stocare;}
+		if(fortaArmata !=0){
+		this.fortaArmata=fortaArmata;
+		}
+		
+		else
+		{
+			System.out.println("Date incorecte");
+		}
 	}
 	
 
@@ -37,7 +53,13 @@ public class Barbari implements ITrib{
 
 
 	public void setNumarPersoane(int numarPersoane) {
+		if(numarPersoane !=0){
 		this.numarPersoane = numarPersoane;
+		}
+		else
+		{
+			System.out.println("Introdu alt numar!");
+		}
 	}
 
 
@@ -47,7 +69,13 @@ public class Barbari implements ITrib{
 
 
 	public void setFortaArmata(int fortaArmata) {
+		if(fortaArmata !=0){
 		this.fortaArmata = fortaArmata;
+		}
+		else
+		{
+			System.out.println("Introdu alt numar de soldati!");
+		}
 	}
 
 
@@ -57,7 +85,13 @@ public class Barbari implements ITrib{
 
 
 	public void setNumePersoane(String numePersoane) {
+		if (numePersoane != null && !numePersoane.matches("[0-9]+")){
 		this.numePersoane = numePersoane;
+		}
+		else
+		{
+			System.out.println("Introdu numele corect!");
+		}
 	}
 
 
@@ -67,7 +101,13 @@ public class Barbari implements ITrib{
 
 
 	public void setDeplasare(int deplasare) {
+		if(deplasare !=0){
 		this.deplasare = deplasare;
+		}
+		else
+		{
+			System.out.println("Introdu alte date pentru deplasare!");
+		}
 	}
 
 

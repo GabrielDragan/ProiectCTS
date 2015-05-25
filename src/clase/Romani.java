@@ -20,30 +20,63 @@ public class Romani implements ITrib{
 		this.fortaArmata=3867;
 	}
 	
-	public Romani(String nume,int numar,int deplasare,int stocare,int forta){
-		this.numePersoane=nume;
-		this.numarPersoane=numar;
-		this.deplasare=deplasare;
-		this.stocareHrana=stocare;
-		this.fortaArmata=forta;
+	public Romani(String numePersoane,int numarPersoane,int deplasare,int stocareHrana,int fortaArmata){
+		if (numePersoane != null && !numePersoane.matches("[0-9]+")){
+			this.numePersoane=numePersoane;
+			}
+			if(numarPersoane !=0){
+			this.numarPersoane=numarPersoane;
+			}
+			if(deplasare !=0){
+			this.deplasare=deplasare;
+			}
+			if(stocareHrana !=0){
+			this.stocareHrana=stocareHrana;}
+			if(fortaArmata !=0){
+			this.fortaArmata=fortaArmata;
+			}
+			
+			else
+			{
+				System.out.println("Date incorecte");
+			}
 	}
 	public int getNumarPersoane() {
 		return numarPersoane;
 	}
 	public void setNumarPersoane(int numarPersoane) {
-		this.numarPersoane = numarPersoane;
+
+		if(numarPersoane !=0){
+			this.numarPersoane = numarPersoane;
+			}
+			else
+			{
+				System.out.println("Introdu alt numar!");
+			}
 	}
 	public String getNumePersoane() {
 		return numePersoane;
 	}
 	public void setNumePersoane(String numePersoane) {
-		this.numePersoane = numePersoane;
+		if (numePersoane != null && !numePersoane.matches("[0-9]+")){
+			this.numePersoane = numePersoane;
+			}
+			else
+			{
+				System.out.println("Introdu numele corect!");
+			}
 	}
 	public int getDeplasare() {
 		return deplasare;
 	}
 	public void setDeplasare(int deplasare) {
-		this.deplasare = deplasare;
+		if(deplasare !=0){
+			this.deplasare = deplasare;
+			}
+			else
+			{
+				System.out.println("Introdu alte date pentru deplasare!");
+			}
 	}
 	public int getStocareHrana() {
 		return stocareHrana;
@@ -62,7 +95,14 @@ public class Romani implements ITrib{
 		return fortaArmata;
 	}
 	public void setFortaArmata(int fortaArmata) {
-		this.fortaArmata = fortaArmata;
+
+		if(fortaArmata !=0){
+			this.fortaArmata = fortaArmata;
+			}
+			else
+			{
+				System.out.println("Introdu alt numar de soldati!");
+			}
 	}
 	
 	@Override

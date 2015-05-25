@@ -23,11 +23,25 @@ public class Daci implements ITrib{
 	}
 	public Daci(String nume,int numar,int deplasare,int stocare,int fortaArmata)
 	{
-		this.numePersoane=nume;
-		this.numarPersoane=numar;
-		this.deplasare=deplasare;
-		this.stocareHrana=stocare;
-		this.fortaArmata=fortaArmata;
+		if (numePersoane != null && !numePersoane.matches("[0-9]+")){
+			this.numePersoane=nume;
+			}
+			if(numarPersoane !=0){
+			this.numarPersoane=numarPersoane;
+			}
+			if(deplasare !=0){
+			this.deplasare=deplasare;
+			}
+			if(stocareHrana !=0){
+			this.stocareHrana=stocare;}
+			if(fortaArmata !=0){
+			this.fortaArmata=fortaArmata;
+			}
+			
+			else
+			{
+				System.out.println("Date incorecte");
+			}
 	}
 	
 	
@@ -37,7 +51,13 @@ public class Daci implements ITrib{
 
 
 	public void setNumarPersoane(int numarPersoane) {
-		this.numarPersoane = numarPersoane;
+		if(numarPersoane !=0){
+			this.numarPersoane = numarPersoane;
+			}
+			else
+			{
+				System.out.println("Introdu alt numar!");
+			}
 	}
 
 
@@ -47,7 +67,14 @@ public class Daci implements ITrib{
 
 
 	public void setNumePersoane(String numePersoane) {
-		this.numePersoane = numePersoane;
+
+		if (numePersoane != null && !numePersoane.matches("[0-9]+")){
+			this.numePersoane = numePersoane;
+			}
+			else
+			{
+				System.out.println("Introdu numele corect!");
+			}
 	}
 
 
@@ -57,7 +84,13 @@ public class Daci implements ITrib{
 
 
 	public void setDeplasare(int deplasare) {
-		this.deplasare = deplasare;
+		if(deplasare !=0){
+			this.deplasare = deplasare;
+			}
+			else
+			{
+				System.out.println("Introdu alte date pentru deplasare!");
+			}
 	}
 
 
@@ -83,7 +116,13 @@ public class Daci implements ITrib{
 
 
 	public void setFortaArmata(int fortaArmata) {
-		this.fortaArmata = fortaArmata;
+		if(fortaArmata !=0){
+			this.fortaArmata = fortaArmata;
+			}
+			else
+			{
+				System.out.println("Introdu alt numar de soldati!");
+			}
 	}
 	
 	@Override
