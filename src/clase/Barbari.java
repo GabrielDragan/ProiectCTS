@@ -137,7 +137,7 @@ public class Barbari implements ITrib{
 
 	public void dezvoltare() {
 		if(numarPersoane < 100){
-			fortaArmata=numarPersoane/3;
+			fortaArmata=numarPersoane/4;
 			System.out.println(fortaArmata);
 		}
 		else if(numarPersoane> 100 && numarPersoane<500){
@@ -149,6 +149,10 @@ public class Barbari implements ITrib{
 			System.out.println(fortaArmata);
 		}
 		
+	}
+	public int consumHrana(Trupe tr){
+		int consum=0;
+		return consum=tr.getNumarCavalerie()*4+tr.getNumarInfanterie()*2;
 	}
 
 }

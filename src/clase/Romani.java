@@ -128,5 +128,9 @@ public class Romani implements ITrib{
 		}
 		
 	}
+	public int consumHrana(Trupe tr){
+		int consum=0;
+		return consum=tr.getNumarCavalerie()*stocareHrana+tr.getNumarInfanterie()*stocareHrana;
+	}
 
 }

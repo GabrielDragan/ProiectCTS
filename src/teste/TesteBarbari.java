@@ -39,5 +39,25 @@ public class TesteBarbari {
 			e.printStackTrace();
 		}
 	} 
+	 
+	 @Test
+	 public void testNume(){
+		 try{
+				new Barbari().setNumePersoane("maciucar");
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+	 }
+	 
+	 @Test
+	 public void testDezvolta(){
+		 try{
+				Barbari bar=new Barbari();
+				bar.setNumarPersoane(353);
+				bar.dezvoltare();
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+	 }
 
 }

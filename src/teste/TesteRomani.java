@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import clase.Barbari;
 import clase.Romani;
 
 public class TesteRomani {
@@ -32,6 +33,17 @@ public class TesteRomani {
 		Romani romani=new Romani("praetorian", 300, 17, 80, 73);
 		}
 		catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+	
+	@Test
+	public void testDezvolta(){
+		try{
+			Romani romani=new Romani();
+			romani.setNumarPersoane(693);
+			romani.dezvoltare();
+		}catch(Exception e){
 			e.printStackTrace();
 		}
 	}

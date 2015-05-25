@@ -136,7 +136,7 @@ public class Daci implements ITrib{
 
 	public void dezvoltare() {
 		if(numarPersoane < 100){
-			fortaArmata=numarPersoane/3;
+			fortaArmata=numarPersoane/4;
 			System.out.println(fortaArmata);
 		}
 		else if(numarPersoane> 100 && numarPersoane<500){

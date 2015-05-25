@@ -47,10 +47,7 @@ public class Trupe {
 	}
 	
 	public void cavalerie(){
-		if(numarCavalerie>numarInfanterie){
-			System.out.println("Cavaleria este mai puternica pentru aparare");
-		}
-		else if(numarCavalerie<350){
+		 if(numarCavalerie<350){
 			System.out.println("Retrage cavaleria inainte sa ajunga atacul");
 		}
 		else 
@@ -66,10 +63,7 @@ public class Trupe {
 			System.out.println("Pastreaza trupele si mai cere intariri");
 	}
 	
-	public int consumHrana(int numarCav,int numarInf){
-		int consum=0;
-		return consum=numarCav*4+numarInf*2;
-	}
+	
 
 	
 }

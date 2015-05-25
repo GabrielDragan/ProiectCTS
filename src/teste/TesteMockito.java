@@ -43,11 +43,16 @@ public class TesteMockito {
 		
 	}
 	
-	@Test
+	/*@Test
 	public void testConsumHrana(){
-		Trupe trupe=new Trupe();
+		Romani romani=new Romani();
+		romani.setStocareHrana(2);
+		Mockito.when(trupe.getNumarCavalerie()).thenReturn(5);
+		Mockito.when(trupe.getNumarInfanterie()).thenReturn(10);
 		
-	}
+		assertEquals(30, romani.consumHrana(trupe));
+		
+	} */
 
 	
 
